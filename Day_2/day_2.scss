@@ -1,0 +1,97 @@
+body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid black;
+        display: flex;
+        position: relative;
+
+        div.clock{
+            background-color: #2ba2d5;
+            // opacity: .5;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius:100%;
+            z-index: -3;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 3px 5px ;
+
+            &::after{
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: #ffffff;
+                top: 45%;
+                left: 45%;
+            }
+            div.clock-face{
+                width: 100px;
+                height: 100px;
+                // border-radius:100%;
+                div.hand{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                div.hour-hand{
+                    transform: rotate(45deg);
+
+                    &::after{
+                        position: absolute;
+                        content:'';
+                        display: block;
+                        width: 3px;
+                        height: 30%;
+                        background-color: red;
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translate(-50%, 0%);
+                        // box-shadow: 0px 0px 1px 1px #eae695;
+
+                    }
+                }
+                div.min-hand{
+                    &::after{
+                        position: absolute;
+                        content:'';
+                        display: block;
+                        width: 2px;
+                        height: 42%;
+                        background-color: #970000;
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translate(-50%, 0%);
+                        // box-shadow: 0px 0px 1px 1px #eae695;
+
+                    }
+                }
+                div.second-hand{
+                    transform: rotate(30deg);
+
+                    &::after{
+                        position: absolute;
+                        content:'';
+                        display: block;
+                        width: 1px;
+                        height: 48%;
+                        background-color: #310000;
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translate(-50%, 0%);
+                        // box-shadow: 0px 0px 1px 1px #eae695;
+
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
