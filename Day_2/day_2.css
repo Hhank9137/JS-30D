@@ -9,7 +9,7 @@ body {
   position: relative;
 }
 body div.clock {
-  background-color: #2ba2d5;
+  background-color: rgba(7, 85, 239, 0.709);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -48,7 +48,7 @@ body div.clock div.clock-face div.hour-hand::after {
   display: block;
   width: 3px;
   height: 30%;
-  background-color: red;
+  background-color: rgb(245, 249, 4);
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 0%);
@@ -59,7 +59,7 @@ body div.clock div.clock-face div.min-hand::after {
   display: block;
   width: 2px;
   height: 42%;
-  background-color: #970000;
+  background-color: rgba(204, 181, 7, 0.995);
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 0%);
@@ -73,8 +73,19 @@ body div.clock div.clock-face div.second-hand::after {
   display: block;
   width: 1px;
   height: 48%;
-  background-color: #310000;
+  background-color: black;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 0%);
+}
+body div.date {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  top: 60%;
+  left: 11%;
 }/*# sourceMappingURL=day_2.css.map */
