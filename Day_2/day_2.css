@@ -9,6 +9,9 @@ body {
   position: relative;
 }
 body div.clock {
+  background-image: url(./Clock.jpeg);
+  background-position: center center;
+  background-size: cover;
   background-color: rgba(7, 85, 239, 0.709);
   width: 100px;
   height: 100px;
@@ -84,7 +87,6 @@ body div.date {
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 30px;
   border: 1px solid black;
   top: 60%;
   left: 11%;
