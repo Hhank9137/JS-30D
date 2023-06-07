@@ -51,6 +51,9 @@
       width: 100px;
     }
     img{
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
         width: 100vw;
         background-position: center center;
         background-size: cover;
@@ -60,7 +63,7 @@
   <script>
     ;(function(){
         const inputs = document.querySelectorAll('.controls input');
-        // function changerHandler(){
+        function changerHandler(){
         //     //this
         //     // console.log(this.name,this.value)
         //     switch (this.name){
@@ -76,14 +79,20 @@
         //             break;
         //     }
 
-        // }
-
-            // document.documentElement.style.setProperty('--' + this.name,this.value + (this.name === 'base' ? '' : 'px'))
-
             const unit = this.dataset.sizing || ''
-            // dataset 用在標籤屬性有data開頭的! 後面的sizing是他的
-            document.documentElement.style.setProperty('--' + this.name,this.value + (this.name === 'base' ? '' : 'px'))
+            // dataset 用在標籤屬性有data開頭的! 後面.sizing 標籤名稱為(data-sizing)
+            // unit的值為:this.dataset.sizing 如果這裡為空值，unit的值就為 ''(空字串)
+            document.documentElement.style.setProperty('--' + this.name,this.value + unit)
+            
+           
+            
 
+
+        }
+
+        
+
+            
 
         inputs.forEach(function(input){
             input.addEventListener('change',changerHandler)
