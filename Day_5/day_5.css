@@ -1,0 +1,75 @@
+html{
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    flex: 1;
+    background: #6B0F9c;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color:white;
+    text-align: center;
+    align-items: center;
+    transition: font-size 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center center;
+}
+.panel1 {background-image: url(./img/kike-salazar-n-DylH5pnrBP8-unsplash.jpg);}
+.panel2{background-image: url(./img/louis-hansel-dNgwsE2HRJw-unsplash.jpg);}
+
+.panel3{background-image: url(./img/michael-cummins-FdmsRk1DVns-unsplash.jpg);}
+
+.panel4{background-image: url(./img/pylyp-sukhenko-Sr3bhcYqftA-unsplash.jpg);}
+
+.panel5{background-image: url(./img/redd-f-WvZalcEX74A-unsplash.jpg);}
+
+.panel > * {
+    flex: 1;
+    margin: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.panel p {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72),0 0 14px rgba(0, 0, 0, 0.45) ;
+    font-size: 2em;
+}
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+ }
+ 
+ .panel > *:last-child{
+     transform: translateY(100%);
+  }
+
+.panel p:nth-child(2){
+    font-size: 4em;
+}
+.panel.open{
+    font-size: 40px;
+}
